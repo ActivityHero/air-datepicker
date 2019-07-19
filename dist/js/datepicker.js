@@ -179,7 +179,7 @@
             }
 
             if (this.opts.timepicker) {
-                this.timepicker = new $.fn.datepicker.Timepicker(this, this.opts);
+                this.timepicker = new $.fn.airDatepicker.Timepicker(this, this.opts);
                 this._bindTimepickerEvents();
             }
 
@@ -195,17 +195,17 @@
 
             this.views[this.currentView] = [];
 
-            this._loopParts(this.views[this.currentView], $.fn.datepicker.Body, this, this.currentView, this.opts)
+            this._loopParts(this.views[this.currentView], $.fn.airDatepicker.Body, this, this.currentView, this.opts)
             this._looper(this.views[this.currentView], 'show');
 
 
-            // this.views[this.currentView] = new $.fn.datepicker.Body(this, this.currentView, this.opts);
+            // this.views[this.currentView] = new $.fn.airDatepicker.Body(this, this.currentView, this.opts);
             // this.views[this.currentView].show();
 
 
 
             this.nav = [];
-            this._loopParts(this.nav, $.fn.datepicker.Navigation, this, this.opts);
+            this._loopParts(this.nav, $.fn.airDatepicker.Navigation, this, this.opts);
             this.view = this.currentView;
 
             this.$el.on('clickCell.adp', this._onClickCell.bind(this));
@@ -245,15 +245,15 @@
 
         _defineLocale: function (lang) {
             if (typeof lang == 'string') {
-                this.loc = $.fn.datepicker.language[lang];
+                this.loc = $.fn.airDatepicker.language[lang];
                 if (!this.loc) {
                     console.warn('Can\'t find language "' + lang + '" in Datepicker.language, will use "ru" instead');
-                    this.loc = $.extend(true, {}, $.fn.datepicker.language.ru)
+                    this.loc = $.extend(true, {}, $.fn.airDatepicker.language.ru)
                 }
 
-                this.loc = $.extend(true, {}, $.fn.datepicker.language.ru, $.fn.datepicker.language[lang])
+                this.loc = $.extend(true, {}, $.fn.airDatepicker.language.ru, $.fn.airDatepicker.language[lang])
             } else {
-                this.loc = $.extend(true, {}, $.fn.datepicker.language.ru, lang)
+                this.loc = $.extend(true, {}, $.fn.airDatepicker.language.ru, lang)
             }
 
             if (this.opts.dateFormat) {
@@ -1492,7 +1492,7 @@
             if (this.inited) {
                 if (!this.views[val]) {
                     this.views[val] = [];
-                    this._loopParts(this.views[val], $.fn.datepicker.Body, this, val, this.opts);
+                    this._loopParts(this.views[val], $.fn.airDatepicker.Body, this, val, this.opts);
                 } else {
                     this._looper(this.views[val], '_render');
                 }
@@ -1612,7 +1612,7 @@
         return new Date(date.year, date.month, date.date)
     };
 
-    $.fn.datepicker = function ( options ) {
+    $.fn.airDatepicker = function ( options ) {
         return this.each(function () {
             if (!$.data(this, pluginName)) {
                 $.data(this,  pluginName,
@@ -1626,9 +1626,9 @@
         });
     };
 
-    $.fn.datepicker.Constructor = Datepicker;
+    $.fn.airDatepicker.Constructor = Datepicker;
 
-    $.fn.datepicker.language = {
+    $.fn.airDatepicker.language = {
         ru: {
             days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
             daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
@@ -1644,7 +1644,7 @@
     };
 
     $(function () {
-        $(autoInitSelector).datepicker();
+        $(autoInitSelector).airDatepicker();
     })
 
 })();
@@ -1665,7 +1665,7 @@
         '<div class="datepicker--cells datepicker--cells-years"></div>' +
         '</div>'
         },
-        datepicker = $.fn.datepicker,
+        datepicker = $.fn.airDatepicker,
         dp = datepicker.Constructor;
 
     datepicker.Body = function (d, type, opts, index) {
@@ -2005,7 +2005,7 @@
             '<div class="datepicker--nav-action" data-action="next">#{nextHtml}</div>',
         buttonsContainerTemplate = '<div class="datepicker--buttons"></div>',
         button = '<span class="datepicker--button" data-action="#{action}">#{label}</span>',
-        datepicker = $.fn.datepicker,
+        datepicker = $.fn.airDatepicker,
         dp = datepicker.Constructor;
 
     datepicker.Navigation = function (d, opts, index) {
@@ -2179,7 +2179,7 @@
         '   </div>' +
         '</div>' +
         '</div>',
-        datepicker = $.fn.datepicker,
+        datepicker = $.fn.airDatepicker,
         dp = datepicker.Constructor;
 
     datepicker.Timepicker = function (inst, opts) {
@@ -2414,7 +2414,7 @@
         _onChangeRange: function (e) {
             var $target = $(e.target),
                 name = $target.attr('name');
-            
+
             this.d.timepickerIsActive = true;
 
             this[name] = $target.val();

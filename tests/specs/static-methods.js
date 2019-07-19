@@ -1,6 +1,6 @@
 var assert = chai.assert,
     expect = chai.expect,
-    plugin = $.fn.datepicker.Constructor;
+    plugin = $.fn.airDatepicker.Constructor;
 
 describe('Datepicker', function () {
     describe('getDaysCount', function () {

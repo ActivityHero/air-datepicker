@@ -491,12 +491,12 @@ block content
         h2#localization Локализация
         p
             | Вы можете добавить свою локализацию в объект
-            +example-inline('$.fn.datepicker.language["my-lang"]', 'js')
+            +example-inline('$.fn.airDatepicker.language["my-lang"]', 'js')
             | и при вызове календаря передать название языка в параметр
             +example-inline('language', 'js')
 
         +example-code('js').
-            $.fn.datepicker.language['my-lang'] = {...}
+            $.fn.airDatepicker.language['my-lang'] = {...}
 
             $('.my-datepicker').datepicker({
                 language: 'my-lang'
@@ -518,7 +518,7 @@ block content
 
         h3 Пример объекта локализации
         +example-code('js').
-            $.fn.datepicker.language['ru'] =  {
+            $.fn.airDatepicker.language['ru'] =  {
                 days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
                 daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
                 daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],

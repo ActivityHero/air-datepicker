@@ -68,7 +68,7 @@ $('.my-datepicker').datepicker([options])
 ### v2.0.0
 * added timepicker (see [docs](http://t1m0n.name/air-datepicker/docs#timepicker) for more info)
 * added possibility to set `Date` in `todayButton` 
-* global variable `Datepicker` has been removed, now all placed in `$.fn.datepicker`
+* global variable `Datepicker` has been removed, now all placed in `$.fn.airDatepicker`
 * improved `selectDate` method, now one can pass an array of dates to select
 * added `npm` package
 * fixed issue caused by `placeholder` on `readonly` inputs in IE

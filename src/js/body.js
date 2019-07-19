@@ -14,7 +14,7 @@
         '<div class="datepicker--cells datepicker--cells-years"></div>' +
         '</div>'
         },
-        datepicker = $.fn.datepicker,
+        datepicker = $.fn.airDatepicker,
         dp = datepicker.Constructor;
 
     datepicker.Body = function (d, type, opts, index) {

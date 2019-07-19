@@ -257,8 +257,8 @@ $('#timepicker-actions-exmpl').datepicker({
         }
     })
 &lt;/script&gt;
-</code></pre></div></article><article><h2 id="localization">Localization</h2><p>You can add your localization to object<span class="example-inline"><code class="js">$.fn.datepicker.language[&quot;my-lang&quot;]</code></span>and pass it name to parameter<span class="example-inline"><code class="js">language</code></span></p><pre class="example-code"><code class="js">// Add custom localization
-$.fn.datepicker.language['my-lang'] = {...}
+</code></pre></div></article><article><h2 id="localization">Localization</h2><p>You can add your localization to object<span class="example-inline"><code class="js">$.fn.airDatepicker.language[&quot;my-lang&quot;]</code></span>and pass it name to parameter<span class="example-inline"><code class="js">language</code></span></p><pre class="example-code"><code class="js">// Add custom localization
+$.fn.airDatepicker.language['my-lang'] = {...}
 
 // Initialize datepicker with it
 $('.my-datepicker').datepicker({
@@ -268,7 +268,7 @@ $('.my-datepicker').datepicker({
         days: [...]
         ...
     }
-})</code></pre><p>If some fields are missing, they will be taken from default localization object ('Russian').</p><h3>Example of localization object</h3><pre class="example-code"><code class="js">$.fn.datepicker.language['en'] = {
+})</code></pre><p>If some fields are missing, they will be taken from default localization object ('Russian').</p><h3>Example of localization object</h3><pre class="example-code"><code class="js">$.fn.airDatepicker.language['en'] = {
     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],

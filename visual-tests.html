@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Air datepicker visual tests</title>
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="dist/js/datepicker.js"></script>
         <link rel="stylesheet" href="dist/css/datepicker.css"/>
         <link rel="stylesheet" href="docs/css/style.css"/>
@@ -47,7 +47,7 @@
                         <h2>{range: true, onSelect: ...}</h2>
                         <div class="datepicker-here" id="dp-3" data-range="true"></div>
                         <script type="text/javascript">
-                            $('#dp-3').datepicker({
+                            $('#dp-3').airDatepicker({
                                 onSelect: function (fd) {
                                     log(fd)
                                 }
@@ -58,7 +58,7 @@
                         <h2>{range: true, onSelect: ...}</h2>
                         <input class="datepicker-here" id="dp-4" data-range="true"/>
                         <script type="text/javascript">
-                            $('#dp-4').datepicker({
+                            $('#dp-4').airDatepicker({
                                 onSelect: function (fd) {
                                     log(fd)
                                 }
@@ -79,7 +79,7 @@
                         <h2>{onChange: ..., toggleSelected: false, range: true}</h2>
                         <input id="dp-5" class="datepicker-here" data-timepicker="true" />
                         <script type="text/javascript">
-                            $('#dp-5').datepicker({
+                            $('#dp-5').airDatepicker({
                                 toggleSelected: false,
                                 inline: true,
                                 range: true,
@@ -97,7 +97,7 @@
                         <h2>{timepicker: true, minDate: new Date()}</h2>
                         <input class="datepicker-here" id="dp-6"/>
                         <script type="text/javascript">
-                            $('#dp-6').datepicker({
+                            $('#dp-6').airDatepicker({
                                 minDate: new Date(),
                                 inline: true,
                                 timepicker: true
