@@ -6,6 +6,7 @@
     monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     today: 'Today',
     clear: 'Clear',
+    apply: 'Apply',
     dateFormat: 'mm/dd/yyyy',
     timeFormat: 'hh:ii aa',
     firstDay: 0

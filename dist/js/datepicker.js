@@ -51,6 +51,7 @@
 
             todayButton: false,
             clearButton: false,
+            applyButton: false,
 
             showEvent: 'focus',
             autoClose: false,
@@ -220,7 +221,7 @@
             this.maxDate = this.opts.maxDate ? this.opts.maxDate : new Date(8639999913600000);
         },
 
-        _bindEvents : function () {
+        _bindEvents: function () {
             this.$el.on(this.opts.showEvent + '.adp', this._onShowEvent.bind(this));
             this.$el.on('mouseup.adp', this._onMouseUpEl.bind(this));
             this.$el.on('blur.adp', this._onBlur.bind(this));
@@ -621,6 +622,13 @@
             if (this.opts.onSelect) {
                 this._triggerOnChange()
             }
+        },
+
+        apply: function() {
+          if (this.opts.onApply) {
+            this.opts.onApply();
+          }
+          this.hide();
         },
 
         /**
@@ -1637,6 +1645,7 @@
             monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             today: 'Сегодня',
             clear: 'Очистить',
+            apply: 'Применять',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
             firstDay: 1
@@ -2027,7 +2036,7 @@
         _bindEvents: function () {
             this.$container.on('click', '.datepicker--nav-action', $.proxy(this._onClickNavButton, this));
             this.$container.on('click', '.datepicker--nav-title', $.proxy(this._onClickNavTitle, this));
-            this.d.$datepicker.on('click', '.datepicker--button', $.proxy(this._onClickNavButton, this));
+            this.d.$datepicker.off('click', '.datepicker--button').on('click', '.datepicker--button', $.proxy(this._onClickNavButton, this));
         },
 
         _buildBaseHtml: function () {
@@ -2045,6 +2054,9 @@
             }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.applyButton) {
+                this._addButton('apply')
             }
         },
 
