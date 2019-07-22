@@ -158,7 +158,7 @@
     .datepickers-container {
       display: none; } }
 
-.datepicker {
+.datepickers-container .datepicker {
   background: #fff;
   border: 1px solid #dbdbdb;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -216,7 +216,7 @@
 .datepicker-inline .datepicker--pointer {
   display: none; }
 
-.datepicker--content {
+.datepickers-container .datepicker--content {
   box-sizing: content-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,7 +286,7 @@
 /* -------------------------------------------------
     Navigation
    ------------------------------------------------- */
-.datepicker--nav-container {
+.datepickers-container .datepicker--nav-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -351,7 +351,7 @@
     cursor: default;
     background: none; }
 
-.datepicker--buttons {
+.datepickers-container .datepicker--buttons {
   display: -ms-flexbox;
   display: flex;
   padding: 4px;
